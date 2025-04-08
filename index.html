@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Chatbot IBM Watson</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bienvenido a nuestro sitio</h1>
+  <p>Aquí puedes hablar con nuestro asistente virtual para resolver tus dudas o recibir ayuda personalizada.</p>
+
+  <!-- Watson Assistant Web Chat -->
+  <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "TU-INTEGRATION-ID", // Reemplaza esto por tu ID de integración
+        region: "eu-gb", // Cambia si estás en otra región (ej. us-south, au-syd, etc.)
+        serviceInstanceID: "TU-SERVICE-INSTANCE-ID", // Reemplaza si es necesario
+        onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    }, 0);
+  </script>
+
+</body>
+</html>
